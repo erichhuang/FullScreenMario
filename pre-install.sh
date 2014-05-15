@@ -8,9 +8,10 @@ rpm-build rpmdevtools redhat-rpm-config make gcc glibc-static
 RPMUSER="rpmbuilder"
 RPMHOME="/home/$RPMUSER"
 ARCH="$(arch)"
-HTTP_PROXY="http://proxy.oit.duke.edu:3128"
 
-export HTTP_PROXY
+# Addition for working on the docker dv VM
+export http_proxy=http://proxy.oit.duke.edu:3128
+# End addition
 
 /usr/sbin/useradd $RPMUSER
 
